@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhanusya Segaran D | AI & Data Science Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 18px;
+            color: white;
+            scroll-behavior: smooth;
+            background: #000814;
+            overflow-x: hidden;
+        }
+        
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(270deg, #000814, #001d3d, #003566);
+        }
+        
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid #00cfff;
+        }
+        
+        nav h1 {
+            font-size: 26px;
+            color: #00cfff;
+            text-shadow: 0 0 10px #00cfff;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        
+        nav ul li a {
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #00cfff;
+        }
+        
+        section {
+            padding: 100px 10%;
+        }
+        
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+        }
+        
+        .hero span {
+            color: #00cfff;
+            text-shadow: 0 0 15px #00cfff;
+        }
+        
+        .hero p {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #e0f7ff;
+        }
+        
+        .hero-img {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .hero-img img {
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #00cfff;
+            box-shadow: 0 0 40px #00cfff;
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        
+        .btn {
+            padding: 12px 35px;
+            border: 2px solid #00cfff;
+            background: transparent;
+            color: #00cfff;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: 0.3s;
+            box-shadow: 0 0 10px #00cfff;
+            font-size: 18px;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        
+        .btn:hover {
+            background: #00cfff;
+            color: #001d3d;
+            box-shadow: 0 0 30px #00cfff;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.4rem;
+            margin-bottom: 50px;
+            color: #00cfff;
+        }
+        
+        .card,
+        .tool-card {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid #00cfff;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+        
+        .card:hover,
+        .tool-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 20px #00cfff;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .tool-card {
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .contact-card {
+            text-align: center;
+        }
+        
+        .contact-card a {
+            color: #00cfff;
+            text-decoration: none;
+        }
+        
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+        
+        .social-links {
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            font-size: 32px;
+            color: #00cfff;
+            margin: 15px;
+            transition: 0.3s;
+        }
+        
+        .social-links a:hover {
+            transform: scale(1.2);
+            color: white;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #000814;
+            border-top: 1px solid #00cfff;
+        }
+        
+        @media(max-width:900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-img img {
+                width: 250px;
+                height: 250px;
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="particles-js"></div>
+
+    <nav>
+        <h1>Dhanusya</h1>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Hello, I'm <span>Dhanusya Segaran D</span></h2>
+            <p>
+                Motivated and detail-oriented AI & Data Science student passionate about Artificial Intelligence, Machine Learning and Data Analytics.
+            </p>
+            <a href="Dhanusya Resume.pdf" download class="btn">Download Resume</a>
+        </div>
+
+        <div class="hero-img">
+            <img src="profile.png.jpeg" alt="Profile">
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="card">
+            Motivated college student seeking challenging opportunities to apply programming skills to real-world projects. Strong understanding of Data Structures, Algorithms, Web Development and Data Analytics.
+        </div>
+    </section>
+
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="card">
+            <h3>Achariya College of Engineering Technology</h3>
+            <p>B.Tech – Artificial Intelligence & Data Science (2023–2027)</p>
+            <p>CGPA: 8.11</p>
+        </div>
+
+        <div class="card">
+            <h3>Immaculate Heart of Mary Girls Hr Sec School</h3>
+            <p>Completed Higher Secondary Schooling (2023)</p>
+            <p>Percentage: 76%</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Artificial Intelligence</h3>
+            </div>
+            <div class="card">
+                <h3>Machine Learning</h3>
+            </div>
+            <div class="card">
+                <h3>Data Analysis</h3>
+            </div>
+            <div class="card">
+                <h3>Data Cleaning</h3>
+            </div>
+            <div class="card">
+                <h3>Data Visualization</h3>
+            </div>
+            <div class="card">
+                <h3>UI/UX Design</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="tools">
+        <h2 class="section-title">Tools & Technologies</h2>
+        <div class="grid">
+            <div class="tool-card">Python</div>
+            <div class="tool-card">C</div>
+            <div class="tool-card">SQL</div>
+            <div class="tool-card">Excel</div>
+            <div class="tool-card">Power BI</div>
+            <div class="tool-card">Tableau</div>
+            <div class="tool-card">Git & GitHub</div>
+            <div class="tool-card">RPA (UiPath)</div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="card">
+            <h3>Quadsel Solutions Pvt Ltd (2024)</h3>
+            <p>Data analysis and project management using Python.</p>
+        </div>
+
+        <div class="card">
+            <h3>Alfrin Technologies Pvt Ltd (2025)</h3>
+            <p>Chatbot Developer, Freelance Developer.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="card">
+            <h3>Drowsiness Detection System (2024)</h3>
+            <p>Domain: Machine Learning</p>
+        </div>
+
+        <div class="card">
+            <h3>Electric Vehicle Charging Infrastructure (2025)</h3>
+            <p>Domain: Automation</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="card contact-card">
+            <p>
+                Email: <a href="mailto:dhanusyasegaran@gmail.com">dhanusyasegaran@gmail.com</a>
+                </a>
+            </p>
+            <p>Phone: +91 8870896795</p>
+            <p>Location: Puducherry, India</p>
+
+            <div class="social-links">
+                <a href="https://github.com/dhanusyasegaran" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/dhanusya-segaran-257205335" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Dhanusya Segaran D | AI & Data Science Portfolio
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: {
+                    value: 80
+                },
+                color: {
+                    value: "#00cfff"
+                },
+                shape: {
+                    type: "circle"
+                },
+                opacity: {
+                    value: 0.5
+                },
+                size: {
+                    value: 3
+                },
+                move: {
+                    speed: 2
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
