@@ -255,6 +255,20 @@ function initProjectFilters() {
    6. Project Details Modal
    ========================================================================== */
 const projectData = {
+    cyber_ai: {
+        title: "Adaptive Multi-Agent AI for Cybersecurity Incident Investigation and Risk Prioritization",
+        category: "Multi-Agent AI, LLM & Cybersecurity",
+        image: "assets/images/project_cyber_ai.jpg",
+        description: "An advanced multi-agent AI architecture engineered for automated cybersecurity alert correlation, threat investigation, automated verification, and risk prioritization. Utilizes specialized agentic workflows and Retrieval-Augmented Generation (RAG) to inspect indicators of compromise, query security intelligence bases, and generate analyst-grade incident reports.",
+        highlights: [
+            "Alert Correlation & Risk Scoring: Correlates disparate security alerts and assigns dynamic risk scores based on threat severity.",
+            "Autonomous AI Investigation: Employs AI agents and RAG pipelines to investigate active threats and retrieve intelligence.",
+            "Verification Agent: Deploys a dedicated verification agent to rigorously validate findings and reduce false positives.",
+            "Explainability (XAI): Produces evidence-backed incident reports with human-in-the-loop analyst feedback loops."
+        ],
+        techStack: ["Python", "Multi-Agent AI", "LLM", "RAG", "Explainable AI", "Cybersecurity", "Machine Learning"],
+        githubUrl: "https://github.com/dhanusyasegaran"
+    },
     drowsiness: {
         title: "Drowsiness Detection System (2024)",
         category: "Machine Learning & Computer Vision",
