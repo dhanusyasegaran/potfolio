@@ -25,11 +25,11 @@ function initTypewriter() {
     if (!typewriterElement) return;
 
     const words = [
-        "AI & Data Science Student",
-        "Machine Learning Developer",
-        "Data Analytics Enthusiast",
-        "Chatbot & Automation Specialist",
-        "Aspiring Solutions Architect"
+        "Data Analyst Fresher",
+        "Business Intelligence Enthusiast",
+        "Python & SQL Data Analyst",
+        "Data Visualization & Insights",
+        "Aspiring Data Analyst"
     ];
 
     let wordIndex = 0;
