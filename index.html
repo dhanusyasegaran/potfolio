@@ -4,404 +4,796 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dhanusya Segaran D | AI & Data Science Portfolio</title>
+    <meta name="description" content="Portfolio of Dhanusya Segaran D, B.Tech AI & Data Science student. Machine Learning, Data Analytics, RPA Automation, and Chatbot Developer based in Puducherry, India.">
+    <meta name="keywords" content="Dhanusya Segaran, AI Portfolio, Machine Learning, Data Science, Python, Tableau, Power BI, UiPath, Chatbot Developer">
+    <meta name="author" content="Dhanusya Segaran D">
 
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dhanusya Segaran D | AI & Data Science Portfolio">
+    <meta property="og:description" content="AI & Data Science Student passionate about Machine Learning, Data Analytics, and Intelligent Automation.">
+    <meta property="og:image" content="profile.png.jpeg">
+
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: "Times New Roman", Times, serif;
-            font-size: 18px;
-            color: white;
-            scroll-behavior: smooth;
-            background: #000814;
-            overflow-x: hidden;
-        }
-        
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: linear-gradient(270deg, #000814, #001d3d, #003566);
-        }
-        
-        nav {
-            position: fixed;
-            width: 100%;
-            padding: 20px 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            border-bottom: 1px solid #00cfff;
-        }
-        
-        nav h1 {
-            font-size: 26px;
-            color: #00cfff;
-            text-shadow: 0 0 10px #00cfff;
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-        
-        nav ul li a {
-            font-size: 18px;
-            color: white;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        
-        nav ul li a:hover {
-            color: #00cfff;
-        }
-        
-        section {
-            padding: 100px 10%;
-        }
-        
-        .hero {
-            height: 100vh;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 40px;
-        }
-        
-        .hero-text {
-            flex: 1;
-        }
-        
-        .hero h2 {
-            font-size: 3rem;
-        }
-        
-        .hero span {
-            color: #00cfff;
-            text-shadow: 0 0 15px #00cfff;
-        }
-        
-        .hero p {
-            margin-top: 20px;
-            font-size: 20px;
-            color: #e0f7ff;
-        }
-        
-        .hero-img {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-        }
-        
-        .hero-img img {
-            width: 350px;
-            height: 350px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #00cfff;
-            box-shadow: 0 0 40px #00cfff;
-            animation: float 4s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-15px);
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
-        
-        .btn {
-            padding: 12px 35px;
-            border: 2px solid #00cfff;
-            background: transparent;
-            color: #00cfff;
-            cursor: pointer;
-            border-radius: 30px;
-            transition: 0.3s;
-            box-shadow: 0 0 10px #00cfff;
-            font-size: 18px;
-            text-decoration: none;
-            margin-top: 20px;
-            display: inline-block;
-        }
-        
-        .btn:hover {
-            background: #00cfff;
-            color: #001d3d;
-            box-shadow: 0 0 30px #00cfff;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.4rem;
-            margin-bottom: 50px;
-            color: #00cfff;
-        }
-        
-        .card,
-        .tool-card {
-            background: rgba(0, 0, 0, 0.6);
-            border: 1px solid #00cfff;
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            transition: 0.3s;
-        }
-        
-        .card:hover,
-        .tool-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 0 20px #00cfff;
-        }
-        
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        
-        .tool-card {
-            text-align: center;
-            font-weight: bold;
-        }
-        
-        .contact-card {
-            text-align: center;
-        }
-        
-        .contact-card a {
-            color: #00cfff;
-            text-decoration: none;
-        }
-        
-        .contact-card a:hover {
-            text-decoration: underline;
-        }
-        
-        .social-links {
-            margin-top: 20px;
-        }
-        
-        .social-links a {
-            font-size: 32px;
-            color: #00cfff;
-            margin: 15px;
-            transition: 0.3s;
-        }
-        
-        .social-links a:hover {
-            transform: scale(1.2);
-            color: white;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #000814;
-            border-top: 1px solid #00cfff;
-        }
-        
-        @media(max-width:900px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
-            .hero-img img {
-                width: 250px;
-                height: 250px;
-                margin-top: 30px;
-            }
-        }
-    </style>
+    <!-- Custom Modern Stylesheet -->
+    <link rel="stylesheet" href="potfolio.css">
 </head>
 
 <body>
 
-    <div id="particles-js"></div>
+    <!-- Ambient Glowing Orbs -->
+    <div id="ambient-glow-1"></div>
+    <div id="ambient-glow-2"></div>
 
-    <nav>
-        <h1>Dhanusya</h1>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#tools">Tools</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <!-- Interactive Particle Constellation Canvas -->
+    <canvas id="particle-canvas"></canvas>
 
-    <section class="hero">
-        <div class="hero-text">
-            <h2>Hello, I'm <span>Dhanusya Segaran D</span></h2>
-            <p>
-                Motivated and detail-oriented AI & Data Science student passionate about Artificial Intelligence, Machine Learning and Data Analytics.
-            </p>
-            <a href="Dhanusya Resume.pdf" download class="btn">Download Resume</a>
-        </div>
+    <!-- Navigation Header -->
+    <header>
+        <nav class="navbar" id="navbar">
+            <a href="#hero" class="nav-brand" id="nav-brand-logo">
+                <img src="profile.png.jpeg" alt="Dhanusya Segaran" class="brand-avatar">
+                <div class="brand-text">
+                    <span class="brand-name">Dhanusya</span>
+                    <span class="brand-badge">AI & DATA SCIENCE</span>
+                </div>
+            </a>
 
-        <div class="hero-img">
-            <img src="profile.png.jpeg" alt="Profile">
-        </div>
-    </section>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation Menu">
+                <i class="fas fa-bars"></i>
+            </button>
 
-    <section id="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="card">
-            Motivated college student seeking challenging opportunities to apply programming skills to real-world projects. Strong understanding of Data Structures, Algorithms, Web Development and Data Analytics.
-        </div>
-    </section>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#about" class="nav-link" id="nav-about-link">About</a></li>
+                <li><a href="#skills" class="nav-link" id="nav-skills-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link" id="nav-experience-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link" id="nav-projects-link">Projects</a></li>
+                <li><a href="#education" class="nav-link" id="nav-education-link">Education</a></li>
+                <li><a href="#contact" class="nav-link" id="nav-contact-link">Contact</a></li>
+            </ul>
 
-    <section id="education">
-        <h2 class="section-title">Education</h2>
-        <div class="card">
-            <h3>Achariya College of Engineering Technology</h3>
-            <p>B.Tech – Artificial Intelligence & Data Science (2023–2027)</p>
-            <p>CGPA: 8.11</p>
-        </div>
-
-        <div class="card">
-            <h3>Immaculate Heart of Mary Girls Hr Sec School</h3>
-            <p>Completed Higher Secondary Schooling (2023)</p>
-            <p>Percentage: 76%</p>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2 class="section-title">Skills</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Artificial Intelligence</h3>
-            </div>
-            <div class="card">
-                <h3>Machine Learning</h3>
-            </div>
-            <div class="card">
-                <h3>Data Analysis</h3>
-            </div>
-            <div class="card">
-                <h3>Data Cleaning</h3>
-            </div>
-            <div class="card">
-                <h3>Data Visualization</h3>
-            </div>
-            <div class="card">
-                <h3>UI/UX Design</h3>
-            </div>
-        </div>
-    </section>
-
-    <section id="tools">
-        <h2 class="section-title">Tools & Technologies</h2>
-        <div class="grid">
-            <div class="tool-card">Python</div>
-            <div class="tool-card">C</div>
-            <div class="tool-card">SQL</div>
-            <div class="tool-card">Excel</div>
-            <div class="tool-card">Power BI</div>
-            <div class="tool-card">Tableau</div>
-            <div class="tool-card">Git & GitHub</div>
-            <div class="tool-card">RPA (UiPath)</div>
-        </div>
-    </section>
-
-    <section id="experience">
-        <h2 class="section-title">Work Experience</h2>
-        <div class="card">
-            <h3>Quadsel Solutions Pvt Ltd (2024)</h3>
-            <p>Data analysis and project management using Python.</p>
-        </div>
-
-        <div class="card">
-            <h3>Alfrin Technologies Pvt Ltd (2025)</h3>
-            <p>Chatbot Developer, Freelance Developer.</p>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2 class="section-title">Projects</h2>
-        <div class="card">
-            <h3>Drowsiness Detection System (2024)</h3>
-            <p>Domain: Machine Learning</p>
-        </div>
-
-        <div class="card">
-            <h3>Electric Vehicle Charging Infrastructure (2025)</h3>
-            <p>Domain: Automation</p>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2 class="section-title">Contact</h2>
-        <div class="card contact-card">
-            <p>
-                Email: <a href="mailto:dhanusyasegaran@gmail.com">dhanusyasegaran@gmail.com</a>
-                </a>
-            </p>
-            <p>Phone: +91 8870896795</p>
-            <p>Location: Puducherry, India</p>
-
-            <div class="social-links">
-                <a href="https://github.com/dhanusyasegaran" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-
-                <a href="https://www.linkedin.com/in/dhanusya-segaran-257205335" target="_blank">
-                    <i class="fab fa-linkedin"></i>
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-primary btn-sm" id="nav-cta-btn">
+                    <i class="fas fa-paper-plane"></i> Let's Talk
                 </a>
             </div>
+        </nav>
+    </header>
 
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="status-badge" id="hero-status-pill">
+                        <span class="status-pulse"></span>
+                        Available for Internships & Projects
+                    </div>
+
+                    <h1 class="hero-title">
+                        Hello, I'm <br>
+                        <span class="gradient-text">Dhanusya Segaran D</span>
+                    </h1>
+
+                    <div class="typewriter-container">
+                        <span id="typewriter-text"></span><span class="typewriter-cursor"></span>
+                    </div>
+
+                    <p class="hero-description">
+                        Motivated and detail-oriented undergraduate in <strong>Artificial Intelligence & Data Science</strong> at Achariya College of Engineering Technology. Passionate about machine learning pipelines, business intelligence dashboards, and intelligent process automation.
+                    </p>
+
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary" id="hero-projects-btn">
+                            <i class="fas fa-code-branch"></i> Explore Projects
+                        </a>
+                        <a href="dhanusya resume.pdf" download="Dhanusya_Resume.pdf" class="btn btn-secondary" id="hero-resume-btn">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                    </div>
+
+                    <div class="hero-socials">
+                        <a href="https://github.com/dhanusyasegaran" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="GitHub Profile" id="hero-github-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/dhanusya-segaran-257205335" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="LinkedIn Profile" id="hero-linkedin-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:dhanusyasegaran@gmail.com" class="hero-social-link" title="Email Dhanusya" id="hero-email-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-avatar-wrapper">
+                        <div class="avatar-backdrop-glow"></div>
+                        <div class="avatar-ring"></div>
+                        <div class="avatar-frame">
+                            <img src="profile.png.jpeg" alt="Dhanusya Segaran D" class="avatar-image">
+                        </div>
+
+                        <!-- Floating Badges -->
+                        <div class="floating-badge badge-top">
+                            <div class="floating-badge-icon cyan-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div>
+                                <div class="floating-badge-title">Academic Record</div>
+                                <div class="floating-badge-value">CGPA 8.11 / 10</div>
+                            </div>
+                        </div>
+
+                        <div class="floating-badge badge-bottom">
+                            <div class="floating-badge-icon purple-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div>
+                                <div class="floating-badge-title">Specialization</div>
+                                <div class="floating-badge-value">AI & Automation</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Ribbon -->
+            <div class="stats-ribbon">
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="stat-info">
+                        <h3>8.11</h3>
+                        <p>B.Tech CGPA Distinction</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="stat-info">
+                        <h3>2+</h3>
+                        <p>Industry Internships</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div class="stat-info">
+                        <h3>4+</h3>
+                        <p>End-to-End Projects</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-tools"></i></div>
+                    <div class="stat-info">
+                        <h3>10+</h3>
+                        <p>Tools & Technologies</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section-container" id="about">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-user-astronaut"></i> Discover</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <p class="section-subtitle">
+                    A tech enthusiast bridging the gap between raw data, predictive algorithms, and impactful real-world software solutions.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-narrative">
+                    <div class="glass-card">
+                        <p class="about-text">
+                            Hello! I am <strong>Dhanusya Segaran D</strong>, an Artificial Intelligence & Data Science undergraduate currently pursuing my B.Tech degree at Achariya College of Engineering Technology, Puducherry. 
+                        </p>
+                        <p class="about-text" style="margin-top: 14px;">
+                            My passion lies at the intersection of <strong>Machine Learning</strong>, <strong>Data Analytics</strong>, and <strong>Automated Systems</strong>. I enjoy turning complex data into intuitive, actionable insights and developing intelligent agents that eliminate repetitive work. With practical exposure as a Chatbot Developer at Alfrin Technologies and Data Analyst at Quadsel Solutions, I possess a well-rounded foundation in both theoretical AI principles and hands-on production code.
+                        </p>
+
+                        <div class="about-highlights">
+                            <div class="highlight-box">
+                                <i class="fas fa-brain"></i>
+                                <div>
+                                    <h4>AI & Machine Learning</h4>
+                                    <p>Predictive modeling, computer vision, and neural network foundations.</p>
+                                </div>
+                            </div>
+                            <div class="highlight-box">
+                                <i class="fas fa-chart-pie"></i>
+                                <div>
+                                    <h4>Data Analytics & BI</h4>
+                                    <p>Exploratory data analysis, cleaning, Tableau, and Power BI dashboards.</p>
+                                </div>
+                            </div>
+                            <div class="highlight-box">
+                                <i class="fas fa-cogs"></i>
+                                <div>
+                                    <h4>Automation & RPA</h4>
+                                    <p>Streamlined workflows using UiPath and custom Python scripts.</p>
+                                </div>
+                            </div>
+                            <div class="highlight-box">
+                                <i class="fas fa-code"></i>
+                                <div>
+                                    <h4>Software Development</h4>
+                                    <p>Clean programming in Python, C, C++, and database design with SQL.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-details-card">
+                    <div class="glass-card">
+                        <h3 style="font-size: 1.25rem; margin-bottom: 20px; color: #fff;">
+                            <i class="fas fa-id-card" style="color: var(--cyan); margin-right: 8px;"></i> Quick Information
+                        </h3>
+                        <ul class="details-list">
+                            <li>
+                                <span class="detail-label"><i class="fas fa-user"></i> Full Name:</span>
+                                <span class="detail-val">Dhanusya Segaran D</span>
+                            </li>
+                            <li>
+                                <span class="detail-label"><i class="fas fa-graduation-cap"></i> Degree:</span>
+                                <span class="detail-val">B.Tech - AI & Data Science</span>
+                            </li>
+                            <li>
+                                <span class="detail-label"><i class="fas fa-map-marker-alt"></i> Location:</span>
+                                <span class="detail-val">Puducherry, India</span>
+                            </li>
+                            <li>
+                                <span class="detail-label"><i class="fas fa-envelope"></i> Email:</span>
+                                <span class="detail-val"><a href="mailto:dhanusyasegaran@gmail.com">dhanusyasegaran@gmail.com</a></span>
+                            </li>
+                            <li>
+                                <span class="detail-label"><i class="fas fa-phone-alt"></i> Phone:</span>
+                                <span class="detail-val">+91 88708 96795</span>
+                            </li>
+                            <li>
+                                <span class="detail-label"><i class="fas fa-briefcase"></i> Status:</span>
+                                <span class="detail-val" style="color: var(--emerald);">Open to Opportunities</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Technologies Section -->
+        <section class="section-container" id="skills">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-layer-group"></i> Expertise</span>
+                <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+                <p class="section-subtitle">
+                    A curated collection of programming languages, machine learning frameworks, analytics tools, and workflow automation technologies I use regularly.
+                </p>
+            </div>
+
+            <div class="skills-categories">
+                <!-- AI & Machine Learning -->
+                <div class="glass-card skill-category-card">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-brain"></i></div>
+                        <div>
+                            <h3>AI & Machine Learning</h3>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">Core Artificial Intelligence & Data Modeling</p>
+                        </div>
+                    </div>
+                    <div class="skills-pill-group">
+                        <div class="skill-pill"><i class="fas fa-microchip"></i> Artificial Intelligence</div>
+                        <div class="skill-pill"><i class="fas fa-network-wired"></i> Machine Learning</div>
+                        <div class="skill-pill"><i class="fas fa-chart-line"></i> Data Analysis</div>
+                        <div class="skill-pill"><i class="fas fa-broom"></i> Data Cleaning</div>
+                        <div class="skill-pill"><i class="fas fa-chart-area"></i> Data Visualization</div>
+                        <div class="skill-pill"><i class="fas fa-eye"></i> Computer Vision</div>
+                    </div>
+                </div>
+
+                <!-- Programming Languages -->
+                <div class="glass-card skill-category-card">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-code"></i></div>
+                        <div>
+                            <h3>Programming Languages</h3>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">Logic, Algorithms & Data Architecture</p>
+                        </div>
+                    </div>
+                    <div class="skills-pill-group">
+                        <div class="skill-pill"><i class="fab fa-python"></i> Python</div>
+                        <div class="skill-pill"><i class="fas fa-terminal"></i> C Language</div>
+                        <div class="skill-pill"><i class="fas fa-code"></i> C++</div>
+                        <div class="skill-pill"><i class="fas fa-database"></i> SQL (Structured Query)</div>
+                        <div class="skill-pill"><i class="fab fa-html5"></i> HTML5 & CSS3</div>
+                    </div>
+                </div>
+
+                <!-- Analytics & Business Intelligence -->
+                <div class="glass-card skill-category-card">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-chart-pie"></i></div>
+                        <div>
+                            <h3>Analytics & BI Tools</h3>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">Business Dashboards & Insights</p>
+                        </div>
+                    </div>
+                    <div class="skills-pill-group">
+                        <div class="skill-pill"><i class="fas fa-chart-bar"></i> Power BI</div>
+                        <div class="skill-pill"><i class="fas fa-project-diagram"></i> Tableau</div>
+                        <div class="skill-pill"><i class="fas fa-file-excel"></i> Advanced Excel</div>
+                        <div class="skill-pill"><i class="fas fa-calculator"></i> NumPy & Pandas</div>
+                    </div>
+                </div>
+
+                <!-- Automation, Tools & Design -->
+                <div class="glass-card skill-category-card">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-tools"></i></div>
+                        <div>
+                            <h3>Automation & Platforms</h3>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">RPA, Version Control & Prototyping</p>
+                        </div>
+                    </div>
+                    <div class="skills-pill-group">
+                        <div class="skill-pill"><i class="fas fa-robot"></i> UiPath (RPA)</div>
+                        <div class="skill-pill"><i class="fab fa-git-alt"></i> Git Version Control</div>
+                        <div class="skill-pill"><i class="fab fa-github"></i> GitHub</div>
+                        <div class="skill-pill"><i class="fas fa-laptop-code"></i> VS Code</div>
+                        <div class="skill-pill"><i class="fas fa-pen-nib"></i> UI/UX Design</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline Section -->
+        <section class="section-container" id="experience">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-briefcase"></i> Experience</span>
+                <h2 class="section-title">Work & <span class="gradient-text">Internships</span></h2>
+                <p class="section-subtitle">
+                    Hands-on experience delivering data solutions and building conversational AI agents for modern businesses.
+                </p>
+            </div>
+
+            <div class="timeline">
+                <!-- Alfrin Technologies -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card timeline-content">
+                        <div class="timeline-meta">
+                            <h3 class="timeline-role">Chatbot Developer & Freelance Developer</h3>
+                            <span class="timeline-badge">2025 – Present</span>
+                        </div>
+                        <div class="timeline-company">
+                            <i class="fas fa-building"></i> Alfrin Technologies Pvt. Ltd.
+                        </div>
+                        <p class="timeline-desc">
+                            Designed and deployed conversational chatbots to automate customer support and routine workflows. Handled intent classification, dialog flows, and multi-turn query handling. Collaborated as a freelance developer on client requirements, integrating APIs and frontend chat widgets.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">Chatbot Architecture</span>
+                            <span class="timeline-tag">Python</span>
+                            <span class="timeline-tag">NLP</span>
+                            <span class="timeline-tag">Workflow Automation</span>
+                            <span class="timeline-tag">Freelance Deliverables</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quadsel Solutions -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card timeline-content">
+                        <div class="timeline-meta">
+                            <h3 class="timeline-role">Data Analysis & Project Documentation Intern</h3>
+                            <span class="timeline-badge">2024</span>
+                        </div>
+                        <div class="timeline-company">
+                            <i class="fas fa-building"></i> Quadsel Solutions Pvt. Ltd.
+                        </div>
+                        <p class="timeline-desc">
+                            Conducted comprehensive data analysis and preprocessing using Python. Structured data pipelines for exploratory data analysis (EDA), generated data visualization charts, and prepared rigorous technical documentation and project reports for enterprise clients.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">Python</span>
+                            <span class="timeline-tag">Data Analysis</span>
+                            <span class="timeline-tag">Documentation</span>
+                            <span class="timeline-tag">Data Cleaning</span>
+                            <span class="timeline-tag">Reporting</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section-container" id="projects">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-laptop-code"></i> Portfolio</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <p class="section-subtitle">
+                    A showcase of machine learning systems, automated solutions, conversational AI, and analytics dashboards I've engineered.
+                </p>
+            </div>
+
+            <!-- Filters -->
+            <div class="projects-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning & CV</button>
+                <button class="filter-btn" data-filter="automation">Automation & RPA</button>
+                <button class="filter-btn" data-filter="analytics">Data Analytics & BI</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1: Drowsiness Detection System -->
+                <article class="glass-card project-card" data-category="ml">
+                    <div class="project-image-wrapper">
+                        <img src="assets/images/project_drowsiness.jpg" alt="Drowsiness Detection System" class="project-image">
+                        <div class="project-overlay"></div>
+                        <span class="project-domain-tag"><i class="fas fa-eye"></i> Machine Learning</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-header-row">
+                            <h3 class="project-title">Drowsiness Detection System</h3>
+                            <span class="project-year">2024</span>
+                        </div>
+                        <p class="project-desc">
+                            Real-time computer vision system that tracks facial landmarks and Eye Aspect Ratio (EAR) to detect driver fatigue and immediately trigger alert buzzers to prevent collisions.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Computer Vision</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="project-btn view-project-btn" data-project="drowsiness">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
+                            <a href="https://github.com/dhanusyasegaran" target="_blank" rel="noopener noreferrer" class="project-btn">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: EV Charging Infrastructure -->
+                <article class="glass-card project-card" data-category="automation">
+                    <div class="project-image-wrapper">
+                        <img src="assets/images/project_ev_charging.jpg" alt="Electric Vehicle Charging Infrastructure" class="project-image">
+                        <div class="project-overlay"></div>
+                        <span class="project-domain-tag"><i class="fas fa-charging-station"></i> Automation</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-header-row">
+                            <h3 class="project-title">EV Charging Infrastructure</h3>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <p class="project-desc">
+                            Centralized smart management and automation prototype for EV charging hubs, incorporating real-time telemetry, automated slot assignment, and grid power load optimization.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Automation</span>
+                            <span class="tech-tag">UiPath RPA</span>
+                            <span class="tech-tag">IoT Telemetry</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="project-btn view-project-btn" data-project="ev_charging">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
+                            <a href="https://github.com/dhanusyasegaran" target="_blank" rel="noopener noreferrer" class="project-btn">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Conversational AI Chatbot -->
+                <article class="glass-card project-card" data-category="ml automation">
+                    <div class="project-image-wrapper">
+                        <img src="assets/images/project_ai_chatbot.jpg" alt="Context-Aware AI Chatbot Assistant" class="project-image">
+                        <div class="project-overlay"></div>
+                        <span class="project-domain-tag"><i class="fas fa-comments"></i> NLP & AI</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-header-row">
+                            <h3 class="project-title">Context-Aware AI Chatbot</h3>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <p class="project-desc">
+                            Intelligent dialogue assistant engineered for commercial inquiries, conversational FAQ resolution, and automated customer routing with contextual memory retention.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Chatbots</span>
+                            <span class="tech-tag">REST APIs</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="project-btn view-project-btn" data-project="ai_chatbot">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
+                            <a href="https://github.com/dhanusyasegaran" target="_blank" rel="noopener noreferrer" class="project-btn">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: Predictive Analytics & BI Dashboard -->
+                <article class="glass-card project-card" data-category="analytics">
+                    <div class="project-image-wrapper">
+                        <img src="assets/images/project_analytics_bi.jpg" alt="Predictive Analytics & BI Dashboard" class="project-image">
+                        <div class="project-overlay"></div>
+                        <span class="project-domain-tag"><i class="fas fa-chart-line"></i> Data Science</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-header-row">
+                            <h3 class="project-title">BI & Predictive Analytics</h3>
+                            <span class="project-year">2024–2025</span>
+                        </div>
+                        <p class="project-desc">
+                            Comprehensive data analytics pipeline transforming raw multi-source business data into dynamic Power BI & Tableau dashboards with predictive trend forecasting.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">Tableau</span>
+                            <span class="tech-tag">Python (Pandas)</span>
+                            <span class="tech-tag">SQL</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="project-btn view-project-btn" data-project="analytics_bi">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
+                            <a href="https://github.com/dhanusyasegaran" target="_blank" rel="noopener noreferrer" class="project-btn">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Education & Certifications Section -->
+        <section class="section-container" id="education">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-graduation-cap"></i> Milestones</span>
+                <h2 class="section-title">Education & <span class="gradient-text">Certifications</span></h2>
+                <p class="section-subtitle">
+                    Academic qualifications and professional certifications validating my computer science and analytics competencies.
+                </p>
+            </div>
+
+            <div class="edu-cert-grid">
+                <!-- Education Column -->
+                <div class="edu-cert-column">
+                    <h3><i class="fas fa-university"></i> Academic Background</h3>
+
+                    <div class="glass-card edu-card">
+                        <div class="edu-degree">B.Tech – Artificial Intelligence & Data Science</div>
+                        <div class="edu-institution">Achariya College of Engineering Technology, Puducherry</div>
+                        <div class="edu-meta">
+                            <span><i class="fas fa-calendar-alt"></i> 2023 – 2027</span>
+                            <span class="edu-score"><i class="fas fa-star"></i> CGPA: 8.11 / 10</span>
+                        </div>
+                        <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 10px;">
+                            Focused on machine learning, deep learning architectures, statistical data modeling, and algorithmic problem solving.
+                        </p>
+                    </div>
+
+                    <div class="glass-card edu-card">
+                        <div class="edu-degree">Higher Secondary Schooling (HSC)</div>
+                        <div class="edu-institution">Immaculate Heart of Mary Girls Hr Sec School, Puducherry</div>
+                        <div class="edu-meta">
+                            <span><i class="fas fa-calendar-alt"></i> Completed 2023</span>
+                            <span class="edu-score"><i class="fas fa-check-circle"></i> Score: 76%</span>
+                        </div>
+                        <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 10px;">
+                            Completed with a mathematics and science curriculum, establishing strong logical analysis and quantitative fundamentals.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Certifications Column -->
+                <div class="edu-cert-column">
+                    <h3><i class="fas fa-certificate"></i> Certifications & Honors</h3>
+
+                    <div class="glass-card cert-card">
+                        <div class="cert-icon"><i class="fas fa-robot"></i></div>
+                        <div class="cert-info">
+                            <h4>UiPath Certified RPA Automation</h4>
+                            <p>Robotic Process Automation, Bot Development & Workflow Architecture</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card cert-card">
+                        <div class="cert-icon"><i class="fas fa-brain"></i></div>
+                        <div class="cert-info">
+                            <h4>Machine Learning & Data Science Foundations</h4>
+                            <p>Supervised/Unsupervised Learning, Data Wrangling, Model Evaluation</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card cert-card">
+                        <div class="cert-icon"><i class="fab fa-python"></i></div>
+                        <div class="cert-info">
+                            <h4>Python for Data Science & Analytics</h4>
+                            <p>Data Structures, Pandas, NumPy, and Statistical Visualization</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card cert-card">
+                        <div class="cert-icon"><i class="fas fa-award"></i></div>
+                        <div class="cert-info">
+                            <h4>Hackathons & Technical Symposiums</h4>
+                            <p>Active participant and contributor in college AI coding challenges</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section-container" id="contact">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-paper-plane"></i> Connect</span>
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="section-subtitle">
+                    Have an internship opportunity, project collaboration, or question? Feel free to reach out directly!
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Info Column -->
+                <div class="contact-info-cards">
+                    <!-- Email Card -->
+                    <div class="glass-card contact-card">
+                        <div class="contact-icon-box"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h4>Email Address</h4>
+                            <p>dhanusyasegaran@gmail.com</p>
+                        </div>
+                        <button class="copy-btn" data-copy="dhanusyasegaran@gmail.com" title="Copy Email">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+
+                    <!-- Phone Card -->
+                    <div class="glass-card contact-card">
+                        <div class="contact-icon-box"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-details">
+                            <h4>Phone Number</h4>
+                            <p>+91 88708 96795</p>
+                        </div>
+                        <button class="copy-btn" data-copy="+918870896795" title="Copy Phone Number">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+
+                    <!-- Location Card -->
+                    <div class="glass-card contact-card">
+                        <div class="contact-icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Puducherry, India</p>
+                        </div>
+                    </div>
+
+                    <!-- Social Presence Card -->
+                    <div class="glass-card contact-card">
+                        <div class="contact-icon-box"><i class="fas fa-share-alt"></i></div>
+                        <div class="contact-details">
+                            <h4>Social Profiles</h4>
+                            <div style="display: flex; gap: 14px; margin-top: 8px;">
+                                <a href="https://github.com/dhanusyasegaran" target="_blank" rel="noopener noreferrer" style="color: var(--cyan); font-size: 1.25rem;">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/dhanusya-segaran-257205335" target="_blank" rel="noopener noreferrer" style="color: var(--blue); font-size: 1.25rem;">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="mailto:dhanusyasegaran@gmail.com" style="color: var(--violet); font-size: 1.25rem;">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Message Form -->
+                <div class="glass-card contact-form-card">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 20px; color: #fff;">
+                        Send a Message
+                    </h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="form-name">Your Name *</label>
+                            <input type="text" id="form-name" class="form-control" placeholder="e.g. Jane Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-email">Your Email Address *</label>
+                            <input type="email" id="form-email" class="form-control" placeholder="jane@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-subject">Subject</label>
+                            <input type="text" id="form-subject" class="form-control" placeholder="Internship / Project Discussion">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-message">Your Message *</label>
+                            <textarea id="form-message" class="form-control" placeholder="Hello Dhanusya, I would love to connect with you regarding..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Details Modal Dialog -->
+    <div class="modal-backdrop" id="project-modal">
+        <div class="modal-box">
+            <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Project Details">
+                <i class="fas fa-times"></i>
+            </button>
+            <img src="" alt="" class="modal-img" id="modal-img">
+            <div style="font-size: 0.82rem; font-weight: 600; text-transform: uppercase; color: var(--cyan); margin-bottom: 6px;" id="modal-category"></div>
+            <h3 class="modal-title" id="modal-title"></h3>
+            <p class="modal-desc" id="modal-desc"></p>
+            
+            <h4 style="font-size: 1rem; color: #fff; margin-bottom: 10px;">Key Architectural Highlights:</h4>
+            <ul id="modal-highlights" style="list-style: none; margin-bottom: 20px; font-size: 0.9rem; color: var(--text-secondary);"></ul>
+
+            <h4 style="font-size: 1rem; color: #fff; margin-bottom: 10px;">Technologies Used:</h4>
+            <div id="modal-tech" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 25px;"></div>
+
+            <div style="display: flex; gap: 14px;">
+                <a href="https://github.com/dhanusyasegaran" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="modal-github" style="flex: 1;">
+                    <i class="fab fa-github"></i> View GitHub Repository
+                </a>
+            </div>
         </div>
-    </section>
+    </div>
 
-    <footer>
-        © 2026 Dhanusya Segaran D | AI & Data Science Portfolio
+    <!-- Toast Notification Container -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Dhanusya Segaran D</h3>
+                <p>AI & Data Science Student | Achariya College of Engineering Technology</p>
+            </div>
+            <ul class="footer-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span id="current-year">2026</span> Dhanusya Segaran D. All rights reserved. Crafted with passion & AI innovation.</p>
+        </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        particlesJS("particles-js", {
-            particles: {
-                number: {
-                    value: 80
-                },
-                color: {
-                    value: "#00cfff"
-                },
-                shape: {
-                    type: "circle"
-                },
-                opacity: {
-                    value: 0.5
-                },
-                size: {
-                    value: 3
-                },
-                move: {
-                    speed: 2
-                }
-            }
-        });
-    </script>
-
+    <!-- Custom Script -->
+    <script src="potfolio.js"></script>
 </body>
 
 </html>
