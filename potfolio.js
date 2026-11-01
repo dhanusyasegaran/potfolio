@@ -256,17 +256,30 @@ function initProjectFilters() {
    ========================================================================== */
 const projectData = {
     cyber_ai: {
-        title: "Adaptive Multi-Agent AI for Cybersecurity Incident Investigation and Risk Prioritization",
-        category: "Multi-Agent AI, LLM & Cybersecurity",
+        title: "Adaptive Multi-Agent AI for Cybersecurity Incident Investigation and Risk Prioritization (2026–2027)",
+        category: "Artificial Intelligence & Cybersecurity",
         image: "assets/images/project_cyber_ai.jpg",
-        description: "An advanced multi-agent AI architecture engineered for automated cybersecurity alert correlation, threat investigation, automated verification, and risk prioritization. Utilizes specialized agentic workflows and Retrieval-Augmented Generation (RAG) to inspect indicators of compromise, query security intelligence bases, and generate analyst-grade incident reports.",
+        description: "Modern SOC (Security Operations Center) teams receive massive volumes of security alerts daily, causing severe cognitive overload and alert fatigue. While existing AI systems focus primarily on detecting and prioritizing alerts, this project introduces an autonomous multi-agent system that performs the deep investigation work analysts still do manually. Multiple specialized AI agents correlate alerts, investigate threats using RAG, rigorously verify conclusions, provide explainable risk assessments with SHAP & LIME, and continuously adapt from analyst feedback.",
         highlights: [
-            "Alert Correlation & Risk Scoring: Correlates disparate security alerts and assigns dynamic risk scores based on threat severity.",
-            "Autonomous AI Investigation: Employs AI agents and RAG pipelines to investigate active threats and retrieve intelligence.",
-            "Verification Agent: Deploys a dedicated verification agent to rigorously validate findings and reduce false positives.",
-            "Explainability (XAI): Produces evidence-backed incident reports with human-in-the-loop analyst feedback loops."
+            "Alert Correlation & Risk Scoring: Correlates high-volume alerts and computes dynamic risk scores based on threat severity.",
+            "Autonomous AI Investigation & RAG: Deploys LLM agents (Llama/Mistral via Ollama or Claude) with LangChain/LlamaIndex, Sentence-BERT embeddings, and ChromaDB/FAISS vector stores.",
+            "Multi-Agent Orchestration: Built using LangGraph / CrewAI / AutoGen to coordinate investigation, hypothesis testing, and threat intelligence synthesis.",
+            "Verification Agent: Employs a dedicated verification agent to cross-examine evidence, validate findings, and drastically reduce false positives.",
+            "Explainable AI (XAI): Integrates SHAP & LIME to produce transparent, evidence-based incident reports enriched with analyst feedback loops.",
+            "Full Stack Architecture: Engineered with Python, Pandas, NumPy, Scikit-learn, XGBoost, PyTorch/TensorFlow, FastAPI backend, and interactive Streamlit/React dashboard."
         ],
-        techStack: ["Python", "Multi-Agent AI", "LLM", "RAG", "Explainable AI", "Cybersecurity", "Machine Learning"],
+        techStack: [
+            "Python",
+            "LangGraph / CrewAI",
+            "LLM (Llama / Mistral / Claude)",
+            "RAG (ChromaDB / FAISS)",
+            "Sentence-BERT",
+            "Explainable AI (SHAP / LIME)",
+            "XGBoost / PyTorch",
+            "FastAPI",
+            "Streamlit / React",
+            "Cybersecurity"
+        ],
         githubUrl: "https://github.com/dhanusyasegaran"
     },
     drowsiness: {
